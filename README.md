@@ -2,6 +2,11 @@
 # Useful linux-commands:
 Most of them were found online, if you are an author, leave a message in issues and I will add you to the list of authors.
 
+ - [Find and replace text in all files in current directory ](#find-and-replace-text-in-all-files-in-current-directory)
+ - [Directory synchronization](#directory-synchronization)
+ - [Tar.gz packing with excluding](#tar.gz-packing-with-excluding)
+ - [Export all tables from database to separated files and import to another database](#export-all-tables-from-database-to-separated-files-and-import-to-another-database)
+
 ### Find and replace text in all files in current directory 
 ```bash
 grep 'replace' -P -R -I -l  * | xargs sed -i 's/replace/replacement/g'
