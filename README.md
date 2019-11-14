@@ -30,8 +30,8 @@ Don't forget to make `chmod +x file` to make it executable
 BACKUP_DIR=/home/me/dumpdb
 for TABLE in `mysql -u root -p 'password' -N -B -e 'show tables from database_one'`;
 do
-    mysqldump --skip-comments --compact -uroot database_one $TABLE > $BACKUP_DIR/$TABLE.sql
-    mysql --skip-comments -u root 'password' database_two < $BACKUP_DIR/$TABLE.sql # remove this line if you don't need import 
+    mysqldump --skip-comments --compact -u root -p 'password' database_one $TABLE > $BACKUP_DIR/$TABLE.sql
+    mysql --skip-comments -u root -p 'password' database_two < $BACKUP_DIR/$TABLE.sql # remove this line if you don't need import 
     rm -f $BACKUP_DIR/$TABLE.sql # remove this line if you need backup
 done;
 ```
