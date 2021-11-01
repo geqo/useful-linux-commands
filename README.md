@@ -23,6 +23,12 @@ rsync -r -v --progress -e ssh --exclude='error_log' --exclude='tmp/*' --exclude=
 tar cvf geqo.tar.gz  --exclude='error_log' --exclude='tmp/*' --exclude='media/*' --exclude='*.zip' --exclude='*.pdf' --exclude='*.swf' ./  
 ```
 
+## Tar.gz packing without absolute path
+Dot at the end is important!
+```bash
+tar -cjf site1.tar.bz2 -C /var/www/site1 .
+```
+
 ### Export all tables from database to separated files and import to another database
 Don't forget to make `chmod +x file` to make it executable
 ```bash
